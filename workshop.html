@@ -4,10 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* สิ่งที่อยู่ตรงนี้ จะมีไว้แค่ให้ dev อ่าน */
+        /*1. id,class,DOM* 2. จะแต่งอะไร*/
+    @font-face {
+        font-family: 'Kanit';
+        src: url(./Kanit/Kanit-Regular.ttf);
+    }
+
+    body {
+        font-family: 'Kanit';
+    }
+
+    #register{
+        font-size: 24px;
+        color: yellow;
+        font-weight: 800; /* ความเข้ม font */
+        padding-top: 10px; /* เว้นระยะห่างด้านบนของกรอบ */
+        padding-bottom: 10px; /* เว้นระยะห่างด้านล่างของกรอบ */
+        margin-top: 10px;  /* ระยะห่างของข้อความกรอบบน */
+        margin-bottom: 10px; /* ระยะห่างของข้อความกรอบล่าง */
+        background-color: grey;
+        border: 1px rosybrown solid;
+        padding-left: 20px; /* เว้นระยะห่างด้านซ้ายของกรอบ */
+    }
+        /* .form คือ ขอบของกรอบช่องสี่เหลี่ยม */
+    .form{
+        border: 2px rosybrown solid;
+    }
+
+    .header-form{
+        font-weight: 800;
+    }
+
+    .form{
+        display: block;
+    }
+
+    .gender{
+        display: flex;
+    }
+
+    .container{
+        display: flex;
+    }
+    .item-left{
+        background-color: red;
+        flex: 1;
+    }
+    .item-right{
+        background-color: blue;
+        flex: 1;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    </style>
 </head>
 <body>
 <!---ส่วนที่แสดงออกไปทางหน้าจอของ Browser -->
-<h1>Register form</h1>
+
+<div class="container">
+    <div class="item-left">Left</div>
+    <div class="item-right">Right</div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-item">item 1</div>
+    <div class="grid-item">item 2</div>
+    <div class="grid-item">item 3</div>
+    <div class="grid-item">item 4</div>
+</div>
+
+<div id="register">Register form</div>
 ชื่อจริง<input type="text">
 นามสกุล<input type="text"> <br>
 อายุ<input type="number" min="0" max="100">
