@@ -46,38 +46,46 @@
     }
 
     .container{
-        display: flex;
-    }
-    .item-left{
-        background-color: red;
-        flex: 1;
-    }
-    .item-right{
-        background-color: blue;
-        flex: 1;
+        height: 1800px;
     }
 
-    .grid-container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    .relative{
+        /*left right top bottom */
+        position: relative;
+        left: 20px;
     }
 
+    .absolute{
+        position: absolute;
+        top: 0;
+        left: 0px;
+        right: 0;
+    }
+
+    .fixed{
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    .sticky{
+        position: sticky;
+        top: 50px;
+    }
+
+ 
     </style>
 </head>
 <body>
 <!---ส่วนที่แสดงออกไปทางหน้าจอของ Browser -->
-
 <div class="container">
-    <div class="item-left">Left</div>
-    <div class="item-right">Right</div>
+    <div class="static">Static</div>
+    <div class="relative">Relative</div>
+    <div class="absolute">Absolute</div>
+    <div class="fixed">Fixed</div>
+    <div class="sticky">Sticky</div>
 </div>
-
-<div class="grid-container">
-    <div class="grid-item">item 1</div>
-    <div class="grid-item">item 2</div>
-    <div class="grid-item">item 3</div>
-    <div class="grid-item">item 4</div>
-</div>
+<!--3. form-->
 
 <div id="register">Register form</div>
 <span class="header-form">ชื่อจริง</span>
