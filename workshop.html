@@ -12,101 +12,93 @@
         src: url(./Kanit/Kanit-Regular.ttf);
     }
 
+    html{
+        font-size: 20px;
+    }
+
     body {
         font-family: 'Kanit';
+        font-size: 14px;
+        background-color: darkgrey;
     }
 
     #register{
-        font-size: 24px;
-        color: yellow;
-        font-weight: 800; /* ความเข้ม font */
-        padding-top: 10px; /* เว้นระยะห่างด้านบนของกรอบ */
-        padding-bottom: 10px; /* เว้นระยะห่างด้านล่างของกรอบ */
-        margin-top: 10px;  /* ระยะห่างของข้อความกรอบบน */
-        margin-bottom: 10px; /* ระยะห่างของข้อความกรอบล่าง */
-        background-color: grey;
-        border: 1px rosybrown solid;
-        padding-left: 20px; /* เว้นระยะห่างด้านซ้ายของกรอบ */
-    }
-        /* .form คือ ขอบของกรอบช่องสี่เหลี่ยม */
-    .form{
-        border: 2px rosybrown solid;
-    }
-
-    .header-form{
-        font-weight: 800;
-    }
-
-    .form{
-        display: block;
-    }
-
-    .gender{
-        display: flex;
+        font-size: 2rem;
     }
 
     .container{
-        height: 1800px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .relative{
-        /*left right top bottom */
-        position: relative;
-        left: 20px;
+    .header{
+        font-size: 30px;
+        text-align: center;
     }
 
-    .absolute{
-        position: absolute;
-        top: 0;
-        left: 0px;
-        right: 0;
+    .header-form{
+        width: 140px;
     }
 
-    .fixed{
-        position: fixed;
-        top: 0;
-        right: 0;
+    .flex{
+        display: flex;
     }
 
-    .sticky{
-        position: sticky;
-        top: 50px;
+    .form-input{
+        margin-bottom: 10px;
     }
 
- 
+    input.form,textarea{
+        border: 1px;
+        width: 100%;
+    }
+
+    .center{
+        text-align: center;
+    }
+
+    .button{
+        border: 0;
+        width: 100%;
+        height: 40px;
+        background-color: pink;
+        padding: 10px;
+    }
+
+
     </style>
 </head>
 <body>
 <!---ส่วนที่แสดงออกไปทางหน้าจอของ Browser -->
-<div class="container">
-    <div class="static">Static</div>
-    <div class="relative">Relative</div>
-    <div class="absolute">Absolute</div>
-    <div class="fixed">Fixed</div>
-    <div class="sticky">Sticky</div>
-</div>
+<div class="box"></div>
 <!--3. form-->
+<div class="container">
+    <div class="header form-input">
+        register form
+    </div>
 
-<div id="register">Register form</div>
-<span class="header-form">ชื่อจริง</span>
-<input class="form" type="number" min="0" max="100">
-<span class="header-form">นามสกุล</span>
-<input class="form" type="text"> <br>
-<span class="header-form">อายุ</span>
-<input class="form" type="number" min="0" max="100">
-<div>
-    เพศ
+    <div class="flex form-input">
+    <div class="header-form">ชื่อจริง</div>
+        <input class="form" type="text">
+    </div>
+    <div class="flex form-input">
+    <div class="header-form">นามสกุล</div>
+        <input class="form" type="text">
+    </div>
+    <div class="flex form-input">
+    <div class="header-form">อายุ</div>
+        <input class="form" type="number" min="0" max="100">
+    </div>
+<div class="flex gender form-input">
+    <div class="beader-form">เพศ</div>
     <div>
         <input name="gender" type="radio">ชาย
-    </div>
-    <div>
         <input name="gender" type="radio">หญิง
-    </div>
-    <div>
         <input name="gender" type="radio">ไม่ระบุ
- </div>
 </div>
-<div>
+</div>
+<div class="form-input">
     สิ่งที่สนใจ
     <div>
         <input name="interest" type="checkbox">หนังสือ
@@ -118,12 +110,15 @@
         <input name="interest" type="checkbox">การ์ตูน
     </div>
 </div>
-    <div>
+    <div class="form-input">
         คำอธิบายตัวตนเพิ่มเติม
-        <br>
+        <div>
         <textarea></textarea>
-    </div>
-    <button>ส่งข้อมูล</button>
+        </div>
+    </div class="center">
+    <button class="button">ส่งข้อมูล</button>
+</div>
+
 
 </body>
 </html>
