@@ -209,4 +209,30 @@ for(let index = 0 ; index < students.length ; index++){
     console.log("grade",students[index].age1grade1);
 }
 
+let score2 = 50
+let score3 = 40
+// ประกาศ function
 
+function calculate_grade(parameter){
+
+    if(score2 >= 80){
+        grade2 = "A"
+    }
+    else if(score2 >= 70){
+        grade2 = "B"
+    }
+    else if(score2 >= 60){
+        grade2 = "C"
+    }
+    else if(score2 >= 50){
+        grade2 = "D"
+    }
+    else{
+        grade2 = "F"
+    }
+    return grade2
+}
+
+// การเรียกใช้งาน function
+let grade02 = calculate_grade(score2)
+console.log("score2 = " + grade2)
