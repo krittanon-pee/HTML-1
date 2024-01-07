@@ -63,7 +63,8 @@ Grade
 >= 50 = D
 */
 
-let score = prompt("Enter your score");
+// let score = prompt("Enter your score"); // รับค่าจากผู้ใช้
+let score = 65;
 console.log("have score",score);
 
 // if - else condition
@@ -83,3 +84,36 @@ else if(score >= 50){
 else{
     console.log("You are F")
 }
+
+/*
+&& และ
+|| หรือ
+! not หรือ ไม่
+*/
+
+let num5 = 5;
+let num6 = 8;
+
+let condition2 = num5 >= 3 && num6 >= 5;
+console.log("Result of condition",condition2);
+
+let condition3 = num5 >= 3 || num6 >= 10;
+console.log("Result of condition",condition3);
+
+let age = 30;
+let gender = "male";
+if(age >= 20 && gender == "male"){
+    console.log("You are male")
+}
+
+let Number7 = 20;
+if((Number7 % 2 == 0)){
+    console.log("You are even number")
+}
+
+// loop
+/*
+while
+for
+*/
+
