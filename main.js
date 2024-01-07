@@ -117,3 +117,9 @@ while
 for
 */
 
+let counter = 0;
+console.log("Hello world");
+
+while(counter <= 10){
+    console.log("Hello world");
+}
