@@ -23,10 +23,10 @@ console.log("Number is",number);
 % หารเอาเศษ
 */
 
-let num1 = 10;
-let num2 = 5;
-let result = num1 % num2;
-console.log("Result is",result);
+// let num1 = 15;
+// let num2 = 3;
+// let result = num1 % num2;
+// console.log("Result is",result);
 
 // condition
 /*
@@ -37,3 +37,9 @@ console.log("Result is",result);
 < น้อยกว่า
 <= น้อยกว่าหรือเท่ากับ
 */
+
+let num1 = 10;
+let num2 = 5;
+
+let condition = num1 != num2; // boolean (true/false)
+console.log("Num is",condition);
