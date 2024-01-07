@@ -140,8 +140,12 @@ console.log(age1,age2,age3,age4,age5);
 let ages = [20,25,30,35,40]; // array 5 items
 console.log(ages);
 console.log("ages",ages);
-console.log("ages",ages[0]);
-console.log("ages",ages[1]);
+console.log("ages",ages[0]); // index ที่ 0
+console.log("ages",ages[1]); // index ที่ 1
+
+if(ages.includes(40)){ // true
+    console.log("You are 40 years old")
+}
 
 // แทนที่ค่าใน array
 ages = [45,50]
@@ -150,3 +154,18 @@ console.log(ages);
 // ต่อ array
 ages.push(55);
 console.log(ages);
+
+// ดึง (ตัวสุดท้าย) array
+ages.pop();
+console.log(ages);
+
+let ages2 = [35,14,20]
+console.log(ages2);
+
+ages2.sort(); // เรียงจากน้อยไปมาก
+console.log(ages2);
+
+
+let name_list = ["John","Tom","Jane","Bob"];
+console.log(name_list);
+console.log(name_list[0]);
