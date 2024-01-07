@@ -169,3 +169,14 @@ console.log(ages2);
 let name_list = ["John","Tom","Jane","Bob"];
 console.log(name_list);
 console.log(name_list[0]);
+console.log(name_list[1]);
+console.log(name_list[2]);
+console.log(name_list[3]);
+
+name_list.push("Carol");
+console.log(name_list.length); // จำนวนข้อมูลใน array
+console.log(name_list);
+
+for(let index = 0 ; index < name_list.length ; index++){
+    console.log("name list",name_list[index]);
+}
