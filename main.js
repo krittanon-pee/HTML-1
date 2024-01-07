@@ -130,12 +130,12 @@ for(let counter = 0 ; counter < 10 ; counter = counter + 1){
 }
 
 // 4) Array
-let age1 = 20;
-let age2 = 25;
-let age3 = 30;
-let age4 = 35;
-let age5 = 40;
-console.log(age1,age2,age3,age4,age5);
+let age11 = 20;
+let age22 = 25;
+let age33 = 30;
+let age44 = 35;
+let age55 = 40;
+console.log(age11,age22,age33,age44,age55);
 
 let ages = [20,25,30,35,40]; // array 5 items
 console.log(ages);
@@ -180,3 +180,33 @@ console.log(name_list);
 for(let index = 0 ; index < name_list.length ; index++){
     console.log("name list",name_list[index]);
 }
+
+// 5) Object
+let students = [{
+    age1 : 30,
+    name1 : "John",
+    grade1 : 4.5
+},
+{
+    age1 : 30,
+    name1 : "Yoshi",
+    grade1 : 4.5
+}]
+
+students.push({
+    age1 : 30,
+    name1 : "Luigi",
+    grade1 : 4.5
+})
+
+console.log(students.age1);
+console.log(students.name1);
+console.log(students.grade1);
+
+for(let index = 0 ; index < students.length ; index++){
+    console.log("name",students[index].name1);
+    console.log("age",students[index].age1age1);
+    console.log("grade",students[index].age1grade1);
+}
+
+
