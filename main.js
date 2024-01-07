@@ -122,4 +122,5 @@ console.log("Hello world");
 
 while(counter <= 10){
     console.log("Hello world");
+    counter = counter + 1;
 }
