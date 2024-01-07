@@ -146,3 +146,7 @@ console.log("ages",ages[1]);
 // แทนที่ค่าใน array
 ages = [45,50]
 console.log(ages);
+
+// ต่อ array
+ages.push(55);
+console.log(ages);
