@@ -120,7 +120,19 @@ for
 let counter = 0;
 console.log("Hello world");
 
-while(counter <= 10){
+while(counter < 10){
     console.log("Hello world");
     counter = counter + 1;
 }
+// ผลลัพธ์เมื่อกัน
+for(let counter = 0 ; counter < 10 ; counter = counter + 1){
+    console.log("Hello world");
+}
+
+// 4) Array
+let age1 = 20;
+let age2 = 25;
+let age3 = 30;
+let age4 = 35;
+let age5 = 40;
+let ages = [20,25,30,35,40];
