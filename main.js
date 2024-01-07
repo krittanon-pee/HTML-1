@@ -135,4 +135,14 @@ let age2 = 25;
 let age3 = 30;
 let age4 = 35;
 let age5 = 40;
-let ages = [20,25,30,35,40];
+console.log(age1,age2,age3,age4,age5);
+
+let ages = [20,25,30,35,40]; // array 5 items
+console.log(ages);
+console.log("ages",ages);
+console.log("ages",ages[0]);
+console.log("ages",ages[1]);
+
+// แทนที่ค่าใน array
+ages = [45,50]
+console.log(ages);
