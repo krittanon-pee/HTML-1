@@ -20,7 +20,7 @@ console.log("Number is",number);
 - ลบ
 * คูณ
 / หาร
-% หารเอาเศษ (คำตอบเป็น เศษ)
+% หารเอาเศษ
 */
 
  let num1 = 15;
@@ -207,76 +207,40 @@ for(let index = 0 ; index < students.length ; index++){
     console.log("name",students[index].name1);
     console.log("age",students[index].age1age1);
     console.log("grade",students[index].age1grade1);
+
 }
-
-let score2 = 50
-let score3 = 40
-// ประกาศ function
-
-function calculate_grade(parameter){
-
-    if(score2 >= 80){
-        grade2 = "A"
-    }
-    else if(score2 >= 70){
-        grade2 = "B"
-    }
-    else if(score2 >= 60){
-        grade2 = "C"
-    }
-    else if(score2 >= 50){
-        grade2 = "D"
-    }
-    else{
-        grade2 = "F"
-    }
-    return grade2
-}
-
-// การเรียกใช้งาน function
-let grade02 = calculate_grade(score2)
-console.log("score2 = " + grade2)
-
-
 /*
-object function array
+object
 */
 
-let students2 = [
-    {
-      name: "John",
-      score: 90,
-      grade: 'A'
-    },{
-        name: "Yoshi",
-        score: 80,
-        grade: 'B'
-    },{
-        name: "Mario",
-        score: 70,
-        grade: 'C'
-    }
-]
-//หาว่าอยู่ตรงไหน
-let student = students.find((s) => {
-  if (s.name == 'Yoshi') {
-    return true
-  }
-})
+let score1 = 50
+let score2 = 40
 
-//คูณตัวเลข 2 เท่า
-let doublescore_student = students.map((s) =>{
-  s.score = s.score *2
-  return s
-})
+let grade = ''
 
-let highscore_student = students.filter((s) =>{
- if(s.score >=80){
-    return true
- }
-})
+// ประกาศ function แบบเก่า หรือ ปกติ
+function calculation_grade(parameter) {
 
-//การเรียกใช้ฟังค์ชั่น
-console.log('students',student);
-console.log('doublescore_student',doublescore_student)
-console.log('highscore_student',highscore_student)
+if (score >= 80) {
+    grade = 'A'
+} else if (score >= 70) {
+    grade= 'B'
+} else if (score >= 60) {
+    grade = 'C'
+} else if (score >= 50) {
+    grade= 'D'
+} else {
+    grade= 'F'
+}
+
+}
+
+
+
+
+//การเรียกใช้ function
+
+let grade1 = calculation_grade(score1)
+let grade2 = calculation_grade(score2)
+console.log('score1 = ' + grade1)
+console.log('score2 = ' + grade2)

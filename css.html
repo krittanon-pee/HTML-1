@@ -16,43 +16,45 @@
             padding: 10px;
         }
         .button{
-            background-color: tomato;
+            background-color: yellow;
             border: 0;
             padding: 10px;
         }
         .button.active{
-            background-color: yellow;
+            background-color: green
+            
         }
         .button.danger{
             background-color: red;
         }
-        .item1 + .item2{
-            background-color: chartreuse;
+          .item1 + .item2{
+            background-color: green;
         }
         input[type="text"]{
             background-color: red;
-            height: 100px;
             border: 1;
+            height: 100px;  
         }
     </style>
 </head>
 <body>
-    <!--1) item เป็นลูกของ Container -->
+    <!--1. item เป็นลูกของ Container -->
     <div class ="container">
         Container
     <div class ="item">
         item
     </div>
-</div>
-    <div class ="footer-container">
-        Container
-        <div class ="item">
-            item
-        </div>
-    </div>      
-<!--- 2) item เป็นลูกของ container แค่ชั้นเดียว-->
-    <div class ="main-container">
-        Container
+</div>       
+   <div class =footer-container>
+    Container
+   <div class = "item">
+    item
+   </div>
+</div> 
+    
+<!--- 2. item เป็นลูกของ container แค่ชั้นเดียว-->
+<div class ="main-container">
+    Container
     <div class = "item">
         item
         </div>
@@ -67,16 +69,19 @@
         </div>
     </div>
 </div>
-<!--- 3) มี class ติดกัน-->
-<button class="button">ปุ่ม</button>
-<button class="button active">ปุ่ม</button>    
-<button class="button danger">ปุ่ม</button>
-<!--- 4) เพื่อนกัน adjacent -->
-<div class="item1">item1</div>
-<div class="item2">item2</div>
-<!-- 5) attribute selector -->
-<input type="text" name="firstname">
-<input type="text" name="lastname">
-<input type="text" name="age">
+<!---3. มี class ติดกัน-->
+     <button class ="button">ปุ่ม</button>
+     <button class ="button active ">ปุ่ม</button>
+     <button class ="button danger">ปุ่ม</button>
+     <!--4. เพื่อนกัน adjacent-->
+     <div class="item1">Item1</div>
+     <div class="item2">Item2</div>
+     
+     
+     <!--5. attribute selector-->
+     <input type="text" name="firstname">
+     <input type="text" name="lastname">
+     <input type="text" name="age">
+
 </body>
 </html>

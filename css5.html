@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Desktop */
         ul{
             list-style: none;
             margin: 0;
             padding: 0;
         }
         .desktop ul{
-            display: flex;
+            display:flex;
         }
-        .desktop ul li{
+        .desktop ul>li{
             margin-right: 20px;
         }
-        .mobile,.mobile-menu{
+        .mobile-menu,
+        .mobile{
             display: none;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px){
             .desktop ul{
-                display: none;
+                display:none;
             }
             .mobile-menu{
                 display: block;
@@ -30,8 +30,7 @@
             .mobile-menu:hover + .mobile{
                 display: block;
             }
-            
-        } 
+        }
     </style>
 </head>
 <body>
@@ -39,16 +38,17 @@
         <ul>
             <li>Home</li>
             <li>About</li>
-            <li>Contact</li>
+            <li>Contract</li>
         </ul>
     </div>
     <div class="mobile-menu">Menu</div>
     <div class="mobile">
         <ul>
-            <li>Menu</li>
+            <li>Home</li>
             <li>About</li>
-            <li>Contact</li>
+            <li>Contract</li>
         </ul>
     </div>
+</div>
 </body>
 </html>
