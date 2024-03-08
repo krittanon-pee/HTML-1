@@ -17,14 +17,29 @@ app.get('/testdb', (req, res) => {
      password: 'root',
      database: 'webdb',
      port: 8820
+   })
+ })
+
+ app.get('/testdb-new', (req, res) => {
+  mysql.createConnection({
+     host: 'localhost',
+     user: 'root',
+     password: 'root',
+     database: 'webdb',
+     port: 8820
    }).then((conn) =>{
      conn
      .query('SELECT * FROM users')
      .then((results) => {
        res.json(results[0]);
      })
+     .catch((error) => {
+       console.error("Error fetching data: ", error.message);
+       res.status(500).json({error: "Error fetching data: "});
+     });
    })
  })
+
 
  // path = GET /users สำหรับ get users ทั้งหมดที่บันทึกเข้าไปออกมา
 app.get('/users', (req, res) => {
