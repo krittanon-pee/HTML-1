@@ -86,17 +86,24 @@ app.put('/users/:id', async (req, res) => {
 })
 
 // path = DELETE /users/:id สำหรับการลบ users รายคน (ตาม id ที่บันทึกเข้าไป)
-app.delete('/users/:id', (req, res) => {
-  let id = req.params.id
-  //หาก่อนว่า index ของ user ที่ต้องการลบอยู่ที่ index ไหน
-  let seletedIndex = users.findIndex(user => user.id == id)
-  //ลบ users ออก
-  users.splice(seletedIndex, 1)
-  res.json({
-    message: 'Delete user successfully',
-      indexDelete: seletedIndex
-  })
+app.delete('/users/:id', async (req, res) => {
+  try{
+    let id = req.params.id;
+    const results = await conn.query('DELETE FROM users WHERE id = ?', id)
+    res.json({
+      message: 'delete user successfully',
+      data: results[0]
+    })
+  } catch (error) {
+    console.log('errorMessage:', error.message)
+    res.status(500).json({
+      message: 'something went wrong',
+      errormessage: error.message
+    })
+  }
 })
+
+
 
 app.listen(port, async (req, res) => {
   await initMySQL()
