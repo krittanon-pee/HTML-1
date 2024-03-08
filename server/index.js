@@ -65,25 +65,25 @@ app.get('/users/:id', async (req, res) => {
 
 
 //path = PUT /users/:id สำหรับการแก้ไข users รายคน (ตาม id ที่บันทึกเข้าไป)
-app.put('/users/:id', (req, res) => {
+app.put('/users/:id', async (req, res) => {
   let id = req.params.id;
   let updateUser = req.body;
-  // ค้นหาข้อมูล users
-  let seletedIndex = users.findIndex(user => user.id == id)
-
-  // update ข้อมูล user (null || 'ทดสอบ')
-    users[seletedIndex].firstname = updateUser.firstname || users[seletedIndex].firstname
-    users[seletedIndex].lastname = updateUser.lastname || users[seletedIndex].lastname
-    users[seletedIndex].age = updateUser.age || users[seletedIndex].age
-    users[seletedIndex].gender = updateUser.gender || users[seletedIndex].gender
-
-  res.json({
-    message: 'Update user successfully',
-    data:{
-      user: updateUser,
-      indexUpdate: seletedIndex
-    }
-  })
+  
+  try{
+    let user = req.body;
+    const results = await conn.query('UPDATE INTO users SET ? WHERE id = ?', 
+    [updateUser, id]
+    )
+    res.json({
+      message: 'insert user successfully',
+      data: results
+    })
+  }catch (error) {
+    res.status(500).json({
+      message: 'something went wrong',
+      errormessage: error
+    })
+   }
 })
 
 // path = DELETE /users/:id สำหรับการลบ users รายคน (ตาม id ที่บันทึกเข้าไป)
