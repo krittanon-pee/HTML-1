@@ -9,35 +9,27 @@ const port = 8000;
 // สำหรับเก็บ users
 let users = []
 let counter = 1;
+let conn = null
 
-app.get('/testdb', (req, res) => {
-  mysql.createConnection({
-     host: 'localhost',
-     user: 'root',
-     password: 'root',
-     database: 'webdb',
-     port: 8820
-   })
- })
+const initMySQL = async () => {
+  conn=await mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'webdb',
+    port: 8820
+  })
+}
 
- app.get('/testdb-new', (req, res) => {
-  mysql.createConnection({
-     host: 'localhost',
-     user: 'root',
-     password: 'root',
-     database: 'webdb',
-     port: 8820
-   }).then((conn) =>{
-     conn
-     .query('SELECT * FROM users')
-     .then((results) => {
-       res.json(results[0]);
-     })
-     .catch((error) => {
-       console.error("Error fetching data: ", error.message);
-       res.status(500).json({error: "Error fetching data: "});
-     });
-   })
+
+ app.get('/testdb-new', async (req, res) => {
+ try{
+  const results=await conn.query('SELECT * FROM users')
+  res.json(results[0]);
+ } catch (error) {
+  console.error("Error fetching data: ", error.message);
+     res.status(500).json({error: "Error fetching data: "});
+  }
  })
 
 
@@ -112,6 +104,7 @@ app.delete('/users/:id', (req, res) => {
   })
 })
 
-app.listen(port, (req, res) => {
+app.listen(port, async (req, res) => {
+  await initMySQL()
     console.log('http server running on', + port);
 })
