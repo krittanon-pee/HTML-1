@@ -7,8 +7,7 @@ app.use(bodyParser.json());
 
 const port = 8000;
 // สำหรับเก็บ users
-let users = []
-let counter = 1;
+
 let conn = null
 
 const initMySQL = async () => {
@@ -21,42 +20,28 @@ const initMySQL = async () => {
   })
 }
 
-
- app.get('/testdb-new', async (req, res) => {
- try{
-  const results=await conn.query('SELECT * FROM users')
-  res.json(results[0]);
- } catch (error) {
-  console.error("Error fetching data: ", error.message);
-     res.status(500).json({error: "Error fetching data: "});
-  }
- })
-
-
  // path = GET /users สำหรับ get users ทั้งหมดที่บันทึกเข้าไปออกมา
-app.get('/users', (req, res) => {
-  const filterUsers = users.map(user => {
-    return {
-      id: user.id,
-      firstname: user.firstname,
-      lastname: user.lastname,
-      fullname: user.firstname + ' ' + user.lastname
-    }
-  })
-  res.json(filterUsers);
+app.get('/users', async (req, res) => {
+  const results = await conn.query('SELECT * FROM users')
+  res.json(results[0]);
 })
 
 // path = POST /users สำหรับการสร้าง users ใหม่บันทึกเข้าไป
-app.post('/users', (req, res) => {
-  let user = req.body;
-  user.id = counter
-  counter += 1
-  users.push(user);
-  res.json({
-    message: 'Add new user successfully',
-    user: user
-  });
-})
+app.post('/users', async (req, res) => {
+  try{
+    let user = req.body;
+    const results = await conn.query('INSERT INTO users SET ? ', user)
+    res.json({
+      message: 'insert user successfully',
+      data: results
+    })
+  }catch (error) {
+    res.status(500).json({
+      message: 'something went wrong',
+      errormessage: error
+    })
+   }
+  })
 
 // path = GET /users/:id สำหรับการดึง users รายคนออกมา
 app.get('/users/:id', (req, res) => {
