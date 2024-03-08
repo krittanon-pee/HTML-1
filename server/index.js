@@ -38,7 +38,7 @@ app.post('/users', async (req, res) => {
   }catch (error) {
     res.status(500).json({
       message: 'something went wrong',
-      errormessage: error
+      errormessage: error.message
     })
    }
   })
@@ -66,22 +66,21 @@ app.get('/users/:id', async (req, res) => {
 
 //path = PUT /users/:id สำหรับการแก้ไข users รายคน (ตาม id ที่บันทึกเข้าไป)
 app.put('/users/:id', async (req, res) => {
-  let id = req.params.id;
-  let updateUser = req.body;
-  
   try{
+    let id = req.params.id;
+    let updateUser = req.body;
     let user = req.body;
-    const results = await conn.query('UPDATE INTO users SET ? WHERE id = ?', 
+    const results = await conn.query('UPDATE users SET ? WHERE id = ?', 
     [updateUser, id]
     )
     res.json({
-      message: 'insert user successfully',
-      data: results
+      message: 'update user successfully',
+      data: results[0]
     })
   }catch (error) {
     res.status(500).json({
       message: 'something went wrong',
-      errormessage: error
+      errormessage: error.message
     })
    }
 })
