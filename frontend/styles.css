@@ -9,8 +9,9 @@ body {
   font-family: 'Dancing Script', cursive;
   margin: 0;
   padding: 0;
-  background-color: #f7f7f7;
-  background-image: url("https://wallpapers.com/images/hd/simple-clean-blue-mountain-landscape-i3vff2gf2353io86.jpg");
+  background-color: #e23057;
+  background-image: url("https://t3.ftcdn.net/jpg/03/44/52/88/360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK.jpg");
+  background-size: cover;
 }
 
 .message{
@@ -29,8 +30,7 @@ body {
 }
 
 .container {
-  max-width: 640px;
-  margin-top: 50px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: transparent;
@@ -38,7 +38,18 @@ body {
   width: 70%;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(243, 139, 139, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(238, 1, 1, 0.1);
+  color: rgb(240, 96, 120);
+}
+
+.container h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.container .header-form {
+  height: 100%;
+  margin: 5px 0;
 }
 
 .header {
@@ -52,7 +63,7 @@ body {
 }
 
 .header-form {
-  width: 140px;
+  width: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,6 +71,18 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.header-form .flex {
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px rgb(197, 85, 85) solid;
+  border-radius: 5px;
+}
+
+
+.header-form .flex::placeholder {
+  color: #f1efef;
+}
 .flex {
   display: flex;
 }
@@ -77,15 +100,27 @@ body {
 input.form,
 textarea {
   border: 1px rgb(241, 182, 182) solid;
-  width: 100%;
-  padding: 6px;
+  background: transparent;
+  outline: none;
+  width: 80%;
+  padding: 2px;
+  border-radius: 40px;
+  border: 2px solid (255, 255, 255,.2);
+  padding: 20px 20px 20px;
+  color: #f5f5f5;
 }
+
+input.form,textarea::placeholder {
+  color: #080000;
+  font-size: 14px;
+}
+
 
 .button {
   border: 0;
   width: 50%;
   height: 40px;
-  background-color: rgb(81, 223, 248);
+  background-color: rgb(243, 141, 180);
   color: rgb(3, 1, 1);
 }
 
@@ -127,10 +162,9 @@ textarea {
   display: flex;
   align-items: center;
   padding: 8px 12px;
-  background-color: #f5f5f5;
+  background-color: #e7bbf5;
   border-radius: 10px;
   margin-right: 10px;
-  font-size: 0.9em;
 }
 
 input[type="radio"] {
@@ -170,6 +204,6 @@ input[type="radio"]:checked {
   cursor: pointer;
   padding: 10px;
   box-sizing: border-box;
-  background-color: rgb(172, 241, 241);
+  background-color: rgb(228, 203, 214);
   max-width: 290px;
 }
