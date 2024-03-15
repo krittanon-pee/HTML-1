@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "kanit";
+    src: url("./Kanit/Kanit-Regular.ttf");
+  }
+  
+  body {
+    font-family: "kanit";
+    background-image: url("https://wallpapers.com/images/hd/simple-clean-blue-mountain-landscape-i3vff2gf2353io86.jpg");
+  }

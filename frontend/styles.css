@@ -7,11 +7,11 @@
 
 body {
   font-family: "kanit";
-  background-image: url("https://i.stack.imgur.com/SvWWN.png");
+  background-image: url("https://wallpapers.com/images/hd/simple-clean-blue-mountain-landscape-i3vff2gf2353io86.jpg");
 }
 
 .message{
-  background-color: peachpuff;
+  background-color: rgb(235, 197, 165);
   padding: 5px;
   margin: 5px;
   display: none;
@@ -21,7 +21,7 @@ body {
   display:block;
 }
 .message.danger {
-  background-color: red;
+  background-color: rgb(251, 255, 0);
   display: block;
 }
 
@@ -30,7 +30,7 @@ body {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  background-color: azure;
+  background-color: rgb(187, 241, 241);
   padding: 20px;
   box-sizing: border-box;
 }
@@ -38,6 +38,7 @@ body {
 .header {
   font-size: 30px;
   text-align: center;
+  color: black;
 }
 
 .header-form {
@@ -60,13 +61,14 @@ input.form,
 textarea {
   border: 1px gainsboro solid;
   width: 100%;
+  padding: 6px;
 }
 
 .button {
   border: 0;
   width: 50%;
   height: 40px;
-  background-color: #2962ff;
+  background-color: rgb(40, 213, 243);
   color: white;
 }
 
@@ -80,4 +82,119 @@ textarea {
   .button {
     width: 100%;
   }
+}
+
+.input[type=checkbox] {
+  accent-color: red;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #e0e0e0;
+  color: #696969;
+  border-bottom: 5px solid #d3d3d3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+
+.container {
+  width: 70%;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.header-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-form span {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.form {
+  width: 100%;
+  padding: 12px 15px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+}
+
+
+
+
+.gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gender div {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 0.9em;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+}
+
+input[type="radio"]:checked {
+  background-color: #d3d3d3;
+}
+
+
+.interest {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interest div {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  font-size: 0.9em;
 }
