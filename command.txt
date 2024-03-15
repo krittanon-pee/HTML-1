@@ -1,0 +1,19 @@
+docker run nginx
+
+
+docker ps --all
+
+docker stop
+
+docker rm
+
+docker run -p  8888:80 nginx
+
+docker run -name mrssnginx -p 8888:80 n
+
+docker pull mysql:5.7
+
+docker pull phpmyadmin/phpmyadmin
+
+docker run -d  --name  --network web
+docker run --name mysql --network web -e MYSQL_ROOT_PASSWORD=1111 -e MYSQL_DATABASE=web_db -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress -d mysql:5.7
