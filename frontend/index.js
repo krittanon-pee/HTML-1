@@ -1,3 +1,52 @@
+const BASE_URL = 'http://localhost:8000'
+
+let mode = 'CREATE' // Default mode id CREATE
+let seletedId = ''
+
+window.onload = async () => {
+    const urlParams = new URLSearchParams(window.location.search)
+    const id = urlParams.get('id')
+    console.log('id',id)
+    if (id) {
+        mode = 'EDIT'
+        seletedId = id
+
+        try {
+            //1.เราจะดึงข้อมูล user เอาออกมาดูก่อน
+            const response = await axios.get(`${BASE_URL}/users/${id}`)
+            const user =response.data;
+
+            let firstNameDOM = document.querySelector('input[name=firstname]')
+            let lastNameDOM = document.querySelector('input[name=lastname]')
+            let ageDOM = document.querySelector('input[name=age]')
+            let descriptionDOM = document.querySelector('textarea[name=description]')
+
+            let genderDOM = document.querySelector('input[name=gender]:checked') || {}
+            let interestDOMs = document.querySelectorAll('input[name=interest]:checked') || {}
+
+            firstNameDOM.value = user.firstname
+            lastNameDOM.value = user.lastname
+            ageDOM.value = user.age
+            descriptionDOM.value = user.description
+            
+            for (let i=0;i < genderDOM.length;i++){
+                if (genderDOM[i].value == user) {
+                    genderDOM[i].checked = true
+                }
+            }
+
+            for (let i=0;i < interestDOMs.length;i++){
+                if (user.interests.includes(interestDOMs).value) {
+                    interestDOMs[i].checked = true
+                }
+            }
+
+        } catch (error) {
+            console.log('error',error)
+        }
+    }
+}
+
 const validateData = (userData) => {
     let errors =[]
     if(!userData.firstname ){
@@ -55,7 +104,7 @@ const submitData = async () => {
         
     }
     console.log('submit Data', userData);
-    /*
+    
         const errors = validateData(userData);
         if(errors.length > 0){
             //มี error เกิดขึ้น
@@ -64,7 +113,7 @@ const submitData = async () => {
                 errors: errors
             }
         }
-        */
+        
         const response = await axios.post('http://localhost:8000/users', userData);
         console.log('response', response.data);
 
