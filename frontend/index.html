@@ -20,47 +20,47 @@
       Register form
     </div>
     <div class="flex form-input">
-      <div class="header-form">ชื่อจริง</div>
-      <input class="form" name="firstname" type="text">
+      <div class="header-form">Firstname</div>
+      <input class="form" name="firstname" type="text" placeholder="Please enter your Firstname">
     </div>
     <div class="flex form-input">
-      <div class="header-form">นามสกุล </div>
-      <input class="form" name="lastname" type="text">
+      <div class="header-form">Lastname</div>
+      <input class="form" name="lastname" type="text" placeholder="Please enter your Lastname">
     </div>
     <div class="flex form-input">
-      <div class="header-form">อายุ</div>
-      <input class="form" name="age" type="number" min="0" max="100">
+      <div class="header-form">Age</div>
+      <input class="form" name="age" type="number" min="0" max="100" placeholder="Please enter your Age">
     </div>
     <div class="flex gender form-input">
-      <div class="header-form">เพศ</div>
+      <div class="header-form">Gender</div>
       <div class="flex">
         <div>
-          <input name="gender" type="radio" value="ชาย"> ชาย
+          <input name="gender" type="radio" value="ชาย"> Male
         </div>
         <div>
-          <input name="gender" type="radio" value="หญิง"> หญิง
+          <input name="gender" type="radio" value="หญิง"> Female
         </div>
         <div>
-          <input name="gender" type="radio" value="ไม่ระบุ"> ไม่ระบุ
+          <input name="gender" type="radio" value="ไม่ระบุ"> Not specified
         </div>
       </div>
     </div>
     <div class="form-input">
-      สิ่งที่สนใจ
+      Interesting
       <div>
-        <input name="interest" type="checkbox" value="หนังสือ"> หนังสือ
+        <input name="interest" type="checkbox" value="หนังสือ"> Book
       </div>
       <div>
-        <input name="interest" type="checkbox" value="วิดีโอเกม"> วิดีโอเกม
+        <input name="interest" type="checkbox" value="วิดีโอเกม"> Video games
       </div>
       <div>
-        <input name="interest" type="checkbox" value="การเมือง"> การเมือง
+        <input name="interest" type="checkbox" value="การเมือง"> Politics
       </div>
     </div>
     <div class="form-input">
-      คำอธิบายตัวตนเพิ่มเติม
+      Identity description
       <div>
-        <textarea name="description"></textarea>
+        <textarea name="description" placeholder="Please enter your Identity"></textarea>
       </div>
     </div>
     <div id = "message" class = 'message'>
@@ -72,6 +72,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="index.js"></script>
   </div>
-  
+
 </body>
 </html>
