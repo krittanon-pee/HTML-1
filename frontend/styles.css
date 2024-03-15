@@ -6,12 +6,15 @@
 }
 
 body {
-  font-family: "kanit";
+  font-family: 'Dancing Script', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
   background-image: url("https://wallpapers.com/images/hd/simple-clean-blue-mountain-landscape-i3vff2gf2353io86.jpg");
 }
 
 .message{
-  background-color: rgb(235, 197, 165);
+  background-color: rgb(224, 155, 98);
   padding: 5px;
   margin: 5px;
   display: none;
@@ -26,23 +29,35 @@ body {
 }
 
 .container {
-  width: 100%;
   max-width: 640px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(187, 241, 241);
-  padding: 20px;
+  background-color: rgb(158, 243, 243);
   box-sizing: border-box;
+  width: 70%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(243, 139, 139, 0.1);
 }
 
 .header {
   font-size: 30px;
   text-align: center;
   color: black;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-bottom: 5px solid #d3d3d3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-form {
   width: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .flex {
@@ -50,7 +65,9 @@ body {
 }
 
 .form-input {
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .center {
@@ -59,7 +76,7 @@ body {
 
 input.form,
 textarea {
-  border: 1px gainsboro solid;
+  border: 1px rgb(241, 182, 182) solid;
   width: 100%;
   padding: 6px;
 }
@@ -68,8 +85,8 @@ textarea {
   border: 0;
   width: 50%;
   height: 40px;
-  background-color: rgb(40, 213, 243);
-  color: white;
+  background-color: rgb(81, 223, 248);
+  color: rgb(3, 1, 1);
 }
 
 @media screen and (max-width:768px) {
@@ -84,56 +101,6 @@ textarea {
   }
 }
 
-.input[type=checkbox] {
-  accent-color: red;
-}
-
-body {
-  font-family: 'Dancing Script', cursive;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-}
-
-
-.header {
-  text-align: center;
-  padding: 20px;
-  background-color: #e0e0e0;
-  color: #696969;
-  border-bottom: 5px solid #d3d3d3;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-  font-size: 2em;
-  margin-bottom: 0;
-}
-
-
-.container {
-  width: 70%;
-  margin: 30px auto;
-  padding: 30px;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-}
-
-
-.form-input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.header-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  border-bottom: 1px solid #e0e0e0;
-}
 
 .header-form span {
   font-size: 1.1em;
@@ -148,8 +115,6 @@ body {
   outline: none;
   font-size: 1em;
 }
-
-
 
 
 .gender {
@@ -197,4 +162,14 @@ input[type="radio"]:checked {
   margin-right: 10px;
   margin-bottom: 5px;
   font-size: 0.9em;
+}
+
+.back-to-user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgb(172, 241, 241);
+  max-width: 290px;
 }
