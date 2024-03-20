@@ -5,5 +5,18 @@
   
   body {
     font-family: "kanit";
-    background-image: url("https://wallpapers.com/images/hd/simple-clean-blue-mountain-landscape-i3vff2gf2353io86.jpg");
+    background-image: url("https://t3.ftcdn.net/jpg/03/44/52/88/360_F_344528805_o1LwyPDkkDZ7TEbTE5J08e9m00ZifmGK.jpg");
+    margin : 0;
+    padding: 0;
+    background-size: cover;
+  }
+
+  .back-to-user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(228, 203, 214);
+    max-width: 290px;
   }
